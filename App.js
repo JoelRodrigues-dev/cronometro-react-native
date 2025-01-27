@@ -11,7 +11,7 @@ let hh = 0
 export default function App() {
   const [number, setNumber] = useState(0);
   const [button, setButton] = useState('Iniciar');
-  const [last, setLast] = useState(null)
+  const [lastTime, setLastTime] = useState(null)
 
   function go(){
     if(timer !== null){
@@ -50,7 +50,7 @@ export default function App() {
 
     }
 
-    setLast(number)
+    setLastTime(number)
     setNumber(0);
     ss = 0;
     mm = 0;
@@ -84,7 +84,7 @@ export default function App() {
       
     </View>
     <View style={styles.lastArea}>
-    <Text style={styles.textRun}> {last ? 'Ultimo tempo: ' + last : '  '} </Text>
+    <Text style={styles.textRun}> {lastTime ? 'Ultimo tempo: ' + lastTime : '  '} </Text>
     </View>
     </View>
 
